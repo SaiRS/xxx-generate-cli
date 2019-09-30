@@ -1,0 +1,26 @@
+{
+  "name": "@xxx-generate-cli/add",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "SaiJx <xjiaxiang86@gmail.com>",
+  "homepage": "https://github.com/SaiRS/xxx-generate/tree/master/packages/add#readme",
+  "license": "ISC",
+  "main": "lib/add.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaiRS/xxx-generate.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/SaiRS/xxx-generate/issues"
+  }
+}
