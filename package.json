@@ -1,11 +1,12 @@
 {
-  "name": "xxx-generate",
+  "name": "xxx-generate-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,12 @@
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"
   },
-  "bin": {},
+  "bin": {
+    "xxx-generate-cli": "./dist/src/bin/cli.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "homepage": "https://github.com/SaiRS/xxx-generate#readme",
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -53,6 +59,9 @@
     "ts-node": "^8.4.1"
   },
   "dependencies": {
-    "typescript": "^3.6.3"
+    "import-local": "^3.0.2",
+    "semver": "^6.3.0",
+    "typescript": "^3.6.3",
+    "update-notifier": "^3.0.1"
   }
 }
