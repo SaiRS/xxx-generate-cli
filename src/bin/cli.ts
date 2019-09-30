@@ -31,8 +31,16 @@ if (notifier.update) {
 // 版本检查
 const version = packageJson.engines.node;
 if (!semver.satisfies(process.version, version)) {
+  // eslint-disable-next-line no-useless-escape
   const rawVersion = version.replace(/[^\d\.]*/, '');
-  logger.error('xxx-generate CLI requires at least Node v' + rawVersion + '. ' + 'You have ' + process.version + '.\n');
+  logger.error(
+    'xxx-generate CLI requires at least Node v' +
+      rawVersion +
+      '. ' +
+      'You have ' +
+      process.version +
+      '.\n',
+  );
 } else {
   // eslint-disable-next-line node/no-missing-require
   require('../lib/bootstrap');

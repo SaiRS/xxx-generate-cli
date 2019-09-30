@@ -13,6 +13,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     project: './tsconfig.eslint.json',
+    extraFileExtensions: ['.js', '.ts', 'jsx', 'tsx', '.json'],
   },
   plugins: ['@typescript-eslint'],
   rules: {
