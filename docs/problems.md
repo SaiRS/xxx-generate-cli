@@ -26,7 +26,7 @@
       # 创建软链
       ln -s ../../dist/packages/init @xxx-generate-cli/init
       ```
-   > 麻烦的就是每次需要重新创建一下软链
+   > 麻烦的就是每次@xxx-generate-cli/init发生变化时，都需要重新创建一下软链
 
 4. vscode怎么调试带有prompt的node模块？
    我们的模块有跟shell交互的地方，使用了inquirer，但当调试代码执行到prompt方法时，就没办法进行下去了。

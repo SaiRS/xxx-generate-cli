@@ -6,6 +6,11 @@ import { prompt } from 'inquirer';
 import chalk from 'chalk';
 import { logger } from '../utils/logger';
 
+/**
+ * 命令，对spawn一些操作的封装，主要用于执行shell任务
+ * @export
+ * @class XxxCommand
+ */
 export class XxxCommand {
   /**
    * 执行xxx-generate-cli定义的命令

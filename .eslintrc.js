@@ -29,11 +29,24 @@ module.exports = {
         tryExtensions: ['.js', '.json', '.node', '.ts', '.tsx', '.jsx'],
       },
     ],
+    'require-jsdoc': [
+      'error',
+      {
+        require: {
+          FunctionDeclaration: true,
+          MethodDefinition: true,
+          ClassDeclaration: true,
+          ArrowFunctionExpression: true,
+          FunctionExpression: true,
+        },
+      },
+    ],
+    'valid-jsdoc': 'error',
   },
   settings: {
-    "polyfills": [
+    polyfills: [
       // Example of marking entire API and all methods and properties as polyfilled
-      "Promise"
-    ]
-  }
+      'Promise',
+    ],
+  },
 };
