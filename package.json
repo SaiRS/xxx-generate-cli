@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.5.0",
+    "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-plugin-compat": "^3.3.0",
@@ -65,10 +65,16 @@
     "chalk": "^2.4.2",
     "commander": "^3.0.2",
     "cross-spawn": "^7.0.1",
+    "global-modules": "^2.0.0",
     "import-local": "^3.0.2",
     "inquirer": "^7.0.0",
     "semver": "^6.3.0",
     "typescript": "^3.6.3",
     "update-notifier": "^3.0.1"
-  }
+  },
+  "browserslist": [
+    "chrome 70",
+    "last 1 versions",
+    "not ie <= 8"
+  ]
 }

@@ -2,6 +2,7 @@
 import commander, { Command } from 'commander';
 import packageJson from '../../package.json';
 import { XxxCommand } from './command-run';
+import { logger } from '../utils/logger';
 
 function getValidEnvironment(environment: string): string {
   const validEnvironment = ['react'];
@@ -25,7 +26,7 @@ program
   // eslint-disable-next-line unicorn/prevent-abbreviations, @typescript-eslint/no-unused-vars
   .action(function(env = 'react', cmdObj: Command) {
     //
-    console.log(`env = ${getValidEnvironment(env)}`);
+    logger.log(`env = ${getValidEnvironment(env)}`);
     // 执行命令
     XxxCommand.run('init', getValidEnvironment(env));
   });
@@ -36,7 +37,7 @@ program
   .action((source, destination) => {
     // 参数验证
 
-    console.log('clone command called', source, destination);
+    logger.log('clone command called', source, destination);
   });
 
 program.parse(process.argv);

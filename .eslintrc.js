@@ -30,4 +30,10 @@ module.exports = {
       },
     ],
   },
+  settings: {
+    "polyfills": [
+      // Example of marking entire API and all methods and properties as polyfilled
+      "Promise"
+    ]
+  }
 };
