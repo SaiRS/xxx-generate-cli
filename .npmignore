@@ -1,0 +1,11 @@
+
+/src
+/dist/packages
+/packages
+
+# map文件
+*.map
+# vscode配置
+.vscode
+# npm pack的临时文件
+xxx-generate-cli-*

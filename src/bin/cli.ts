@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env node
 
 /* eslint-disable node/shebang, @typescript-eslint/ban-ts-ignore */
 

@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { prompt } from 'inquirer';
 import chalk from 'chalk';
+import globalDirectories from 'global-dirs';
 import { logger } from '../utils/logger';
 
 /**
@@ -18,6 +19,7 @@ export class XxxCommand {
    * @static
    * @memberof XxxCommand
    * @param {string} command cli输入的命令, 如init, add等
+   * @returns {Promise<any>} promise of any
    */
   public static async run(command: string, ...argues: string[]): Promise<any> {
     let modulePath = this.validateEnvironment(command);
@@ -34,6 +36,15 @@ export class XxxCommand {
     }
   }
 
+  /**
+   * 获取命令对应的包的名字
+   * @static
+   * @param {string} command xxx-generate-cli指定的命令名
+   * @example
+   *  shell命令： xxx-generate-cli init, init为command
+   * @returns {string} npm package name
+   * @memberof XxxCommand
+   */
   static getPackageNameFromCommand(command: string): string {
     return `@xxx-generate-cli/${command}`;
   }
@@ -41,7 +52,7 @@ export class XxxCommand {
   /**
    * 验证模块是否存在，如果存在，返回模块的module的路径，否则返回false
    * @static
-   * @param {string} command
+   * @param {string} command xxx-generate-cli指定的命令名
    * @returns {(string | false)} string表示模块对应的module路径, false表示没有找到该模块
    * @memberof XxxCommand
    */
@@ -52,6 +63,13 @@ export class XxxCommand {
     );
   }
 
+  /**
+   * 返回command对应的本地安装的package的路径，如果不存在，则返回false
+   * @static
+   * @param {string} command xxx-generate-cli指定的命令名
+   * @returns {(string | false)} 不存在对应的命令，则返回false,否则返回对应的package的路径
+   * @memberof XxxCommand
+   */
   static _validateLocalEnvironment(command: string): string | false {
     try {
       // 本地
@@ -60,6 +78,7 @@ export class XxxCommand {
         'node_modules',
         this.getPackageNameFromCommand(command),
       );
+      logger.info('local module path', pathForCmd);
       require.resolve(pathForCmd);
       return pathForCmd;
     } catch (error_) {
@@ -67,15 +86,28 @@ export class XxxCommand {
     }
   }
 
+  /**
+   * 返回command对应的全局安装的package的路径，如果不存在，则返回false
+   * @static
+   * @param {string} command xxx-generate-cli指定的命令名
+   * @returns {(string | false)} 不存在对应的命令，则返回false,否则返回对应的package的路径
+   * @memberof XxxCommand
+   */
   static _validateGlobalEnvironment(command: string): string | false {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const globalModules = require('global-modules');
+      const isYarn = this.isUseYarn();
+      let prefix = '';
+      if (isYarn) {
+        prefix = globalDirectories.yarn.packages;
+      } else {
+        prefix = globalDirectories.npm.packages;
+      }
+
       const pathForCmd = path.resolve(
-        globalModules,
+        prefix,
         this.getPackageNameFromCommand(command),
       );
-
+      logger.info('global module path', pathForCmd);
       require.resolve(pathForCmd);
       return pathForCmd;
     } catch (error_) {
@@ -86,9 +118,9 @@ export class XxxCommand {
   /**
    * 执行shell命令
    * @static
-   * @param {string} command
-   * @param {...string[]} argues
-   * @returns {Promise<void>}
+   * @param {string} command shell命令
+   * @param {...string[]} argues shell命令的参数
+   * @returns {Promise<void>} void
    * @memberof XxxCommand
    */
   public static runShellCommand(
@@ -113,15 +145,25 @@ export class XxxCommand {
   }
 
   /**
-   *
+   * 判断本地是否有yarn模块
    * @static
-   * @param {string} scopeName
-   * @param {string[]} argues
-   * @returns
+   * @memberof XxxCommand
+   * @returns {boolean} true表示本地有yarn模块
+   */
+  static isUseYarn(): boolean {
+    const _isYarn = fs.existsSync(path.resolve(process.cwd(), 'yarn.lock'));
+    return _isYarn;
+  }
+
+  /**
+   * 提示安装名字为scopeName的包
+   * @static
+   * @param {string} scopeName 包名
+   * @returns {Promise<any>} Promise
    * @memberof XxxCommand
    */
   static async promptInstallation(scopeName: string): Promise<any> {
-    const isYarn = fs.existsSync(path.resolve(process.cwd(), 'yarn.lock'));
+    const isYarn = this.isUseYarn();
     const packageManager = isYarn ? 'yarn' : 'npm';
     const options = [isYarn ? 'add' : 'install', '-D', scopeName];
 
