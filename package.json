@@ -4,16 +4,20 @@
   "description": "",
   "main": "./dist/src/bin/cli.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --collect-coverage",
     "eslint": "eslint",
     "eslint:quick": "eslint './src/**/*.*' './packages/**/*.*'",
-    "tsc": "tsc"
+    "tsc:all": "npm run tsc:this && lerna run tsc",
+    "tsc:this": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SaiRS/xxx-generate.git"
   },
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "keywords": ["generate", "project"],
   "author": "",
   "license": "ISC",
   "bugs": {

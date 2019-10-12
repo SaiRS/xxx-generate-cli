@@ -43,11 +43,11 @@
 
     /* Module Resolution Options */
     // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "xxx-generate-cli": ["src/"],
       "@xxx-generate-cli/*": ["packages/*"]
-    },                                        /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
     // "types": [],                           /* Type declaration files to be included in compilation. */
@@ -68,6 +68,6 @@
     /* Advanced Options */
     "resolveJsonModule": true /* Include modules imported with '.json' extension */
   },
-  "include": ["./src/**/*", "./packages/**/*", "package.json"],
+  "include": ["./src/**/*", "package.json"],
   "exclude": ["node_modules/**", "packages/*/node_modules/**", "**/__tests__/*"]
 }

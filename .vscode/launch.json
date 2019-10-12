@@ -7,12 +7,19 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "test jest",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "debug xxx-generate-cli init react",
       "program": "${workspaceFolder}\\dist\\src\\bin\\cli.js",
-      "args": [
-        "init",
-        "react"
-      ]
+      "args": ["init", "react"]
     }
   ]
 }
