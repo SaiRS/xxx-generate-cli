@@ -1,7 +1,5 @@
-'use strict';
-
-import { init } from '../lib/init';
-
 describe('init', () => {
-    it('needs tests');
+  test('TODO', () => {
+    expect(2 + 2).toBe(3);
+  });
 });

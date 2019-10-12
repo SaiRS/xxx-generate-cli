@@ -5,12 +5,14 @@ import packageJson from '../package.json';
 packageJson;
 
 /**
- *
  * 安装webpack模块
  * @returns {void} void
  */
 function installWebpack(): void {
-  spawn.spawn('npm', ['install', '--save-dev', 'webpack']);
+  spawn.spawn('npm install --save-dev webpack', [], {
+    stdio: 'inherit',
+    shell: true,
+  });
 }
 
 /**
