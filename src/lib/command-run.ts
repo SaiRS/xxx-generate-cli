@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any, import/default */
 import spawn from 'cross-spawn';
 import path from 'path';
 import fs from 'fs';

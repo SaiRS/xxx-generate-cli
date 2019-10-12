@@ -4,6 +4,11 @@ import packageJson from '../../package.json';
 import { XxxCommand } from './command-run';
 import { logger } from '../utils/logger';
 
+/**
+ * 获取有效的环境字符串
+ * @param {string} environment 带验证的字符串
+ * @returns {string} 有效环境字符串，目前只支持react
+ */
 function getValidEnvironment(environment: string): string {
   const validEnvironment = ['react'];
   const lowerEnvironment = String(environment).toLowerCase();
