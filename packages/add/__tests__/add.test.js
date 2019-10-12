@@ -1,7 +1,5 @@
-'use strict';
-
-import {add} from '../lib/add';
-
 describe('add', () => {
-    it('needs tests');
+  test('TODO', () => {
+    expect(2 + 2).toBe(2);
+  });
 });
