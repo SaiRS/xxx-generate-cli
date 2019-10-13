@@ -2,9 +2,9 @@
 import { merge } from 'lodash';
 import fs from 'fs';
 import pathModule from 'path';
-import spawn from 'cross-spawn';
 const loadJsonFile = require('load-json-file');
 import shell from 'shelljs';
+import prettier from 'prettier';
 
 /**
  * 扩展对象
@@ -34,26 +34,16 @@ export function extendJSON(
  * @throws NodeJS.ErrnoException
  */
 export function writeJsonToPath(json: Record<string, any>, path: string): void {
-  fs.writeFile(
-    path,
-    JSON.stringify(json),
-    (error: NodeJS.ErrnoException | null) => {
-      if (error) {
-        throw error;
-      } else {
-        // 进行一个prettier
-        const localPretter = pathModule.resolve(
-          __dirname,
-          '../node_modules/.bin/prettier',
-        );
-        const command = `${localPretter} ${path} --write`;
-        spawn.spawn(command, [], {
-          stdio: 'inherit',
-          shell: true,
-        });
-      }
-    },
-  );
+  try {
+    // 进行一个prettier
+    const formatJson = prettier.format(JSON.stringify(json), {
+      parser: 'json-stringify',
+    });
+    fs.writeFileSync(path, formatJson);
+  } catch (error_) {
+    // eslint-disable-next-line no-console
+    console.error(error_);
+  }
 }
 
 /**
@@ -71,6 +61,19 @@ export async function extendPackageJSON(
   const result = extendJSON(json, extend);
   writeJsonToPath(result, packagePath);
   return result;
+}
+
+/**
+ * 读取当前路径下的package.json，并进行扩展
+ * @export
+ * @param {Record<string, any>} extend 增加的json数据
+ * @returns {void} void
+ */
+export function extendWorkingDirectoryPackageJson(
+  extend: Record<string, any>,
+): void {
+  const packagePath = pathModule.resolve(process.cwd(), 'package.json');
+  extendPackageJSON(packagePath, extend);
 }
 
 /**
