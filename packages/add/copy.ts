@@ -15,8 +15,8 @@ shelljs.cp('./lib/typescript/tsconfig.json', './dist/lib/typescript');
 shelljs.cp('./lib/typescript/babel.config.js', './dist/lib/typescript');
 
 // eslint
-shelljs.cp('./lib/eslint/.eslintrc.js', './dist/lib/eslint');
-shelljs.cp('./lib/eslint/.eslintignore', './dist/lib/eslint');
+shelljs.cp('./lib/eslint/template/.eslintrc.js', './dist/lib/eslint');
+shelljs.cp('./lib/eslint/template/.eslintignore', './dist/lib/eslint');
 
 // prettier
 shelljs.cp('./lib/prettier/.prettierignore', './dist/lib/prettier');
