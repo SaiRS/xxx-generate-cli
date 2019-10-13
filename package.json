@@ -7,7 +7,7 @@
     "test": "jest --collect-coverage",
     "eslint": "eslint",
     "eslint:quick": "eslint './src/**/*.*' './packages/**/*.*'",
-    "tsc:all": "npm run tsc:this && lerna run tsc",
+    "build": "npm run tsc:this && lerna run build",
     "tsc:this": "tsc"
   },
   "repository": {
