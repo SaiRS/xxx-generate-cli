@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "typescript": "^3.6.3",
+    "ts-node": "^8.4.1",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.6.0"
+  }
+}
