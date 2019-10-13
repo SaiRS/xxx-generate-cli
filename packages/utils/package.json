@@ -27,7 +27,9 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "copy": "ts-node copy.ts",
+    "build": "npm run tsc && npm run copy"
   },
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"
@@ -37,7 +39,8 @@
     "load-json-file": "^6.2.0",
     "lodash": "^4.17.15",
     "prettier": "^1.18.2",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.4.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.144",
