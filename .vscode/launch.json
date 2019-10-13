@@ -18,7 +18,7 @@
       "type": "node",
       "request": "launch",
       "name": "debug xxx-generate-cli init react",
-      "program": "${workspaceFolder}\\dist\\src\\bin\\cli.js",
+      "program": "${workspaceFolder}/dist/src/bin/cli.js",
       "args": ["init", "react"]
     }
   ]

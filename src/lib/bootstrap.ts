@@ -22,9 +22,6 @@ function getValidEnvironment(environment: string): string {
 const program = new commander.Command();
 program.version(packageJson.version);
 
-// arguments
-// program.arguments('init <>');
-
 program
   .command('init [env]')
   .description('init the project, env can be react | node, default is react')
