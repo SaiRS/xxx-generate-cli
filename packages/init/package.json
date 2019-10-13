@@ -23,12 +23,14 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "npm run tsc"
   },
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"
   },
   "dependencies": {
+    "@xxx-generate-cli/add": "^0.0.0",
     "@xxx-generate-cli/utils": "^0.0.0",
     "cross-spawn": "^7.0.1",
     "is": "^3.3.0"

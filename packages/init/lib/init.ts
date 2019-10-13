@@ -1,19 +1,20 @@
-import spawn from 'cross-spawn';
+// import spawn from 'cross-spawn';
 
 // 为了让ts编译后的目录中有package.json文件，因此
 import packageJson from '../package.json';
+import { initReact } from './init-react';
 packageJson;
 
 /**
  * 安装webpack模块
  * @returns {void} void
  */
-function installWebpack(): void {
-  spawn.spawn('npm install --save-dev webpack', [], {
-    stdio: 'inherit',
-    shell: true,
-  });
-}
+// function installWebpack(): void {
+//   spawn.spawn('npm install --save-dev webpack', [], {
+//     stdio: 'inherit',
+//     shell: true,
+//   });
+// }
 
 /**
  * 初始化项目
@@ -30,7 +31,7 @@ export default function init(...arguements: string[]): void {
     arguements[0],
   );
 
-  installWebpack();
+  initReact();
 }
 
 // function initProject(config: Object): void {

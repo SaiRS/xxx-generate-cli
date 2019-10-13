@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const flag = '[xxx-generate-cli]';
 export const logger = {
   log: console.log.bind(console, flag),
@@ -5,3 +6,5 @@ export const logger = {
   warn: console.warn.bind(console, flag),
   error: console.error.bind(console, flag),
 };
+
+/* eslint-enable */
