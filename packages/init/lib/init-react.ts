@@ -8,7 +8,7 @@ import {
   installStyleLintTo,
   installLintStageTo,
   installSassTo,
-  // installJestTo,
+  installJestTo,
   installReact,
   // installWebpack,
 } from '@xxx-generate-cli/add';
@@ -44,7 +44,7 @@ export function initReact(): void {
   installReact();
 
   // 测试框架
-  // installJestTo(cwd);
+  installJestTo(cwd);
 
   // // 打包
   // installWebpack(cwd);

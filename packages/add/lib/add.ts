@@ -12,3 +12,4 @@ export * from './lint-staged';
 export * from './react';
 export * from './stylelint';
 export * from './sass';
+export * from './jest';

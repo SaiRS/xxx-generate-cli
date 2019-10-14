@@ -35,4 +35,10 @@ shelljs.cp(
   './dist/lib/stylelint/template',
 );
 
+// jest
+shelljs.cp('./lib/jest/jest.config.js', './dist/lib/jest/');
+
+// webpack
+shelljs.cp('./lib/webpack/webpack.config.js', './dist/list/webpack');
+
 shelljs.cd('-');
