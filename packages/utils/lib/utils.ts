@@ -53,13 +53,14 @@ export function writeJsonToPath(json: Record<string, any>, path: string): void {
  * @param {Record<string, any>} extend 增加的json数据
  * @returns {Promise<void>} void
  */
-export async function extendPackageJSON(
+export function extendPackageJSON(
   packagePath: string,
   extend: Record<string, any>,
-): Promise<Record<string, any>> {
-  const json = (await loadJsonFile(packagePath)) as Record<string, any>;
+): Record<string, any> {
+  const json = loadJsonFile.sync(packagePath) as Record<string, any>;
   const result = extendJSON(json, extend);
   writeJsonToPath(result, packagePath);
+
   return result;
 }
 
