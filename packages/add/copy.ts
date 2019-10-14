@@ -22,4 +22,6 @@ shelljs.cp('./lib/eslint/template/.eslintignore', './dist/lib/eslint');
 shelljs.cp('./lib/prettier/.prettierignore', './dist/lib/prettier');
 shelljs.cp('./lib/prettier/.prettierrc.js', './dist/lib/prettier');
 
+// lint-staged
+shelljs.cp('./lib/lint-staged/lint-staged.config.js', './dist/lib/lint-staged');
 shelljs.cd('-');
