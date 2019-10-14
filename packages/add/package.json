@@ -14,6 +14,9 @@
     "dist/lib",
     "!dist/*.map"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=10.0.0"
   },
@@ -24,8 +27,8 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "copy": "ts-node copy.ts",
-    "tsc": "tsc",
-    "build": "npm run tsc && npm run copy"
+    "build": "tsc && npm run copy",
+    "watch": "npm run build && tsc -w"
   },
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"

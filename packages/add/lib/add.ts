@@ -7,3 +7,8 @@ export * from './editor-config';
 export * from './typescript';
 export * from './eslint';
 export * from './prettier';
+export * from './browserlist';
+export * from './lint-staged';
+export * from './react';
+export * from './stylelint';
+export * from './sass';
