@@ -54,4 +54,9 @@
   dist目录下的package.json用来运行时使用
 7. window安装husky失败
    这个版本的husky需要git的版本>=2.13.2
-8. ww
+8. npm install可以安装本地模块
+  ```
+   npm install module_path
+   // result:
+   module: "file:../eslint-plugin-xxx-eslint"
+  ```

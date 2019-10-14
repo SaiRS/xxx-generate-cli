@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires, node/no-missing-require, @typescript-eslint/explicit-function-return-type, node/no-extraneous-require */
+/* eslint-disable @typescript-eslint/no-var-requires, node/no-missing-require, node/no-extraneous-require */
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
@@ -61,15 +61,7 @@ function getStyleLoaders(cssOptions, preProcessor) {
     if (preProcessor === 'sass-loader') {
       loaders.push({
         loader: require.resolve(preProcessor),
-        options: {
-          // 厉害，要给跪系列，这脑洞，估计也就我了吧
-          // functions: {
-          //   // 提供给scss的自定义函数
-          //   'get($keys)': function(keys) {
-          //     return toSass(keys, sassVars);
-          //   },
-          // },
-        },
+        options: {},
       });
     } else {
       loaders.push(require.resolve(preProcessor));
