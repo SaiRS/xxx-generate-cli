@@ -13,3 +13,4 @@ export * from './react';
 export * from './stylelint';
 export * from './sass';
 export * from './jest';
+export * from './webpack';

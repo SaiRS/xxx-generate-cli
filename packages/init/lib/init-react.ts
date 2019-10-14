@@ -10,7 +10,7 @@ import {
   installSassTo,
   installJestTo,
   installReact,
-  // installWebpack,
+  installWebpack,
 } from '@xxx-generate-cli/add';
 
 /**
@@ -47,5 +47,5 @@ export function initReact(): void {
   installJestTo(cwd);
 
   // // 打包
-  // installWebpack(cwd);
+  installWebpack(cwd);
 }

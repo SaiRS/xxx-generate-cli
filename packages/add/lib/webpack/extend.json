@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "babel-loader": "^8.0.6",
+    "eslint-loader": "^3.0.2",
+    "eslint-friendly-formatter": "^4.0.1",
+    "autoprefixer": "^9.6.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
+    "css-modules-typescript-loader": "^3.0.1",
+    "css-loader": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "sass-loader": "^8.0.0",
+    "less-loader": "^5.0.0",
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.2.0",
+    "@svgr/webpack": "^4.3.3",
+    "image-webpack-loader": "^6.0.0",
+    "html-loader": "^0.5.5"
+  }
+}
