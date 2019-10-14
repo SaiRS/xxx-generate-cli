@@ -15,5 +15,6 @@ export function installTypeScriptTo(destination: string): void {
   extendWorkingDirectoryPackageJson(extendJson);
 
   const tsconfigJsonPath = path.resolve(__dirname, 'tsconfig.json');
-  copyTo([tsconfigJsonPath], destination);
+  const babelConfigPath = path.resolve(__dirname, 'babel.config.js');
+  copyTo([tsconfigJsonPath, babelConfigPath], destination);
 }
