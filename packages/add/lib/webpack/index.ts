@@ -15,5 +15,6 @@ export function installWebpack(destination: string): void {
   extendWorkingDirectoryPackageJson(extendJson);
 
   const webpackConfigPath = path.resolve(__dirname, 'webpack.config.js');
-  copyTo([webpackConfigPath], destination);
+  const configsPath = path.resolve(__dirname, 'configs');
+  copyTo([webpackConfigPath, configsPath], destination);
 }
