@@ -48,5 +48,8 @@ module.exports = {
       // Example of marking entire API and all methods and properties as polyfilled
       'Promise',
     ],
+    react: {
+      version: 'detect',
+    },
   },
 };
