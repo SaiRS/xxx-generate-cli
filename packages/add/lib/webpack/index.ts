@@ -16,5 +16,7 @@ export function installWebpack(destination: string): void {
 
   const webpackConfigPath = path.resolve(__dirname, 'webpack.config.js');
   const configsPath = path.resolve(__dirname, 'configs');
-  copyTo([webpackConfigPath, configsPath], destination);
+  const publicPath = path.resolve(__dirname, 'public');
+  const scriptPath = path.resolve(__dirname, 'scripts');
+  copyTo([webpackConfigPath, configsPath, publicPath, scriptPath], destination);
 }

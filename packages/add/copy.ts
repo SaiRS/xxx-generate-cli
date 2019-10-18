@@ -41,5 +41,7 @@ shelljs.cp('./lib/jest/jest.config.js', './dist/lib/jest/');
 // webpack
 shelljs.cp('./lib/webpack/webpack.config.js', './dist/lib/webpack');
 shelljs.cp('-ru', './lib/webpack/configs', './dist/lib/webpack/');
+shelljs.cp('-ru', './lib/webpack/public', './dist/lib/webpack/');
+shelljs.cp('-ru', './lib/webpack/scripts', './dist/lib/webpack/');
 
 shelljs.cd('-');

@@ -60,3 +60,4 @@
    // result:
    module: "file:../eslint-plugin-xxx-eslint"
   ```
+9. 推荐只使用css-module,我们使用的`css-modules-typescript-loader`只针对css-module,这样子才能利用typescript检测的能力
