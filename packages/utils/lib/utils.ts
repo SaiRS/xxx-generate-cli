@@ -85,7 +85,7 @@ export function extendWorkingDirectoryPackageJson(
  * @returns {boolean} true表示成功
  */
 export function copyTo(source: string[], destination: string): boolean {
-  shell.cp('-u', source, destination);
+  shell.cp('-ur', source, destination);
   return true;
 }
 
