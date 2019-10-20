@@ -5,14 +5,14 @@
   "author": "SaiJx <xjiaxiang86@gmail.com>",
   "homepage": "https://github.com/SaiRS/xxx-generate/tree/master/packages/add#readme",
   "license": "ISC",
-  "main": "./dist/lib/add.js",
+  "main": "./dist/add.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
     "dist",
-    "!dist/*.map"
+    "!*.map"
   ],
   "publishConfig": {
     "access": "public"

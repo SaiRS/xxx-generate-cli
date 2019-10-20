@@ -8,9 +8,12 @@
     "eslint": "eslint",
     "eslint:quick": "eslint './src/**/*.*' './packages/**/*.*'",
     "build:self": "tsc",
-    "clean": "rimraf dist",
-    "build": "npm run clean && tsc && lerna run build",
-    "watch": "tsc --watch & lerna run watch"
+    "clean": "npm run clean:this & lerna run clean",
+    "clean:this": "rimraf dist",
+    "build": "npm run clean && tsc && npm run make-bin-executable && lerna run build",
+    "make-bin-executable": "ts-node ./make-bin-executable.ts",
+    "watch": "tsc --watch & lerna run watch",
+    "xxx-generate-cli": "node ./dist/bin/cli.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +51,7 @@
     "@types/is": "0.0.21",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
+    "@types/shelljs": "^0.8.5",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
     "babel-jest": "^24.9.0",
@@ -72,6 +76,7 @@
     "lint-staged": "^9.4.0",
     "prettier": "1.18.2",
     "rimraf": "^3.0.0",
+    "shelljs": "^0.8.3",
     "standard-version": "^7.0.0",
     "ts-node": "^8.4.1"
   },

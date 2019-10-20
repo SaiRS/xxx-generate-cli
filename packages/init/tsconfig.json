@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "include": ["lib"],
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "lib",
     "outDir": "dist"
   }
 }

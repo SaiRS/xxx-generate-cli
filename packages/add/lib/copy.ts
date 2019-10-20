@@ -6,6 +6,7 @@ shelljs.cd(__dirname);
 // commit-lint
 shelljs.cp('./lib/commit-lint/.commitlintrc.js', './dist/lib/commit-lint');
 shelljs.cp('./lib/commit-lint/.huskyrc.js', './dist/lib/commit-lint');
+shelljs.cp('./lib/commit-lint/.versionrc.js', './dist/lib/commit-lint');
 
 // editor-config
 shelljs.cp('./lib/editor-config/.editorconfig', './dist/lib/editor-config');

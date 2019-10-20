@@ -16,7 +16,8 @@ import extendJson from './extend.json';
 export function installCommitLintTo(destinationPath: string): void {
   const commintLintSource = path.resolve(__dirname, '.commitlintrc.js');
   const huskyrcSource = path.resolve(__dirname, '.huskyrc.js');
-  copyTo([commintLintSource, huskyrcSource], destinationPath);
+  const versionRcSource = path.resolve(__dirname, '.versionrc.js');
+  copyTo([commintLintSource, huskyrcSource, versionRcSource], destinationPath);
 
   extendWorkingDirectoryPackageJson(extendJson);
 }
