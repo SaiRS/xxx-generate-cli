@@ -14,9 +14,8 @@ import path from 'path';
 export function installWebpack(destination: string): void {
   extendWorkingDirectoryPackageJson(extendJson);
 
-  const webpackConfigPath = path.resolve(__dirname, 'webpack.config.js');
   const configsPath = path.resolve(__dirname, 'configs');
   const publicPath = path.resolve(__dirname, 'public');
   const scriptPath = path.resolve(__dirname, 'scripts');
-  copyTo([webpackConfigPath, configsPath, publicPath, scriptPath], destination);
+  copyTo([configsPath, publicPath, scriptPath], destination);
 }

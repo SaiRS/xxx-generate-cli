@@ -12,7 +12,7 @@
   },
   "files": [
     "dist",
-    "!dist/*.map"
+    "!*.map"
   ],
   "engines": {
     "node": ">=10.0.0"
@@ -36,6 +36,7 @@
   "dependencies": {
     "@xxx-generate-cli/add": "^0.0.0",
     "@xxx-generate-cli/utils": "^0.0.0",
+    "chalk": "^2.4.2",
     "cross-spawn": "^7.0.1",
     "is": "^3.3.0"
   },

@@ -78,7 +78,7 @@ export class XxxCommand {
         'node_modules',
         this.getPackageNameFromCommand(command),
       );
-      logger.info('local module path', pathForCmd);
+      // logger.info('local module path', pathForCmd);
       require.resolve(pathForCmd);
       return pathForCmd;
     } catch (error_) {
@@ -107,7 +107,7 @@ export class XxxCommand {
         prefix,
         this.getPackageNameFromCommand(command),
       );
-      logger.info('global module path', pathForCmd);
+      // logger.info('global module path', pathForCmd);
       require.resolve(pathForCmd);
       return pathForCmd;
     } catch (error_) {

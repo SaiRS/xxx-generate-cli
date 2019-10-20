@@ -23,10 +23,10 @@ import { initReact } from './init-react';
  */
 export default function init(...arguements: string[]): void {
   // eslint-disable-next-line no-console
-  console.log(
-    'Finially, I came to this point. Cheer for myself.',
-    arguements[0],
-  );
+  // console.log(
+  //   'Finially, I came to this point. Cheer for myself.',
+  //   arguements[0],
+  // );
 
   initReact();
 }

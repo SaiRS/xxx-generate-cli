@@ -3,7 +3,7 @@ import commander, { Command } from 'commander';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../../package.json');
 import { XxxCommand } from './command-run';
-import { logger } from '../utils/logger';
+// import { logger } from '../utils/logger';
 
 /**
  * 获取有效的环境字符串
@@ -29,7 +29,7 @@ program
   // eslint-disable-next-line unicorn/prevent-abbreviations, @typescript-eslint/no-unused-vars
   .action(function(env = 'react', cmdObj: Command) {
     //
-    logger.log(`env = ${getValidEnvironment(env)}`);
+    // logger.log(`env = ${getValidEnvironment(env)}`);
     // 执行命令
     XxxCommand.run('init', getValidEnvironment(env));
   });
@@ -39,8 +39,7 @@ program
   .description('clone a repository into a newly created directory')
   .action((source, destination) => {
     // 参数验证
-
-    logger.log('clone command called', source, destination);
+    // logger.log('clone command called', source, destination);
   });
 
 program.parse(process.argv);

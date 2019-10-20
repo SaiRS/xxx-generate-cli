@@ -33,7 +33,7 @@
     "url": "https://github.com/SaiRS/xxx-generate/issues"
   },
   "bin": {
-    "xxx-generate-cli": "./dist/src/bin/cli.js"
+    "xxx-generate-cli": "./dist/bin/cli.js"
   },
   "engines": {
     "node": ">=10.0.0"

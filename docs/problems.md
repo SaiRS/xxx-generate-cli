@@ -23,7 +23,7 @@
    目前采用的方法：
    
    1. 编译@xxx-generate-cli/init模块
-   2. 本地node_modules文件夹下边创建一个软链，只想编译后的@xxx-generate-cli/init
+   2. 本地node_modules文件夹下边创建一个软链，指向编译后的@xxx-generate-cli/init
       ```
       cd ./node_modules
       # 创建软链

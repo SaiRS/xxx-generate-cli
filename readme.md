@@ -2,18 +2,22 @@
 
 用来生成一些项目的脚手架。
 
+![step-demos](docs/images/step-demos.gif)
+
 ## 安装
 
 ### 本地安装
 
 ```
 npm install xxx-generate-cli --save-dev
+npm install @xxx-generate-cli/init --save-dev
 ```
 
 ### 全局安装
 
 ```
 npm install xxx-generate-cli -g
+npm install @xxx-generate-cli/init -g
 ```
 
 ## 使用

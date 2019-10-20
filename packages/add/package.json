@@ -26,7 +26,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "copy": "ts-node ./lib/copy.ts",
+    "copy": "ts-node ./copy.ts",
     "clean": "rimraf dist",
     "build": "npm run clean && tsc && npm run copy",
     "watch": "npm run build && tsc -w"
