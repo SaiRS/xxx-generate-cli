@@ -1,6 +1,6 @@
 {
   "name": "@xxx-generate-cli/init",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "SaiJx <xjiaxiang86@gmail.com>",
   "homepage": "https://github.com/SaiRS/xxx-generate/tree/master/packages/init#readme",
@@ -34,8 +34,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@xxx-generate-cli/add": "^1.0.0",
-    "@xxx-generate-cli/utils": "^1.0.0",
+    "@xxx-generate-cli/add": "^1.0.1",
+    "@xxx-generate-cli/utils": "^1.0.1",
     "chalk": "^2.4.2",
     "cross-spawn": "^7.0.1",
     "is": "^3.3.0"

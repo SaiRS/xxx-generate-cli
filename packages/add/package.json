@@ -1,6 +1,6 @@
 {
   "name": "@xxx-generate-cli/add",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "SaiJx <xjiaxiang86@gmail.com>",
   "homepage": "https://github.com/SaiRS/xxx-generate/tree/master/packages/add#readme",
@@ -35,7 +35,7 @@
     "url": "https://github.com/SaiRS/xxx-generate/issues"
   },
   "dependencies": {
-    "@xxx-generate-cli/utils": "^1.0.0",
+    "@xxx-generate-cli/utils": "^1.0.1",
     "cross-spawn": "^7.0.1",
     "shelljs": "^0.8.3",
     "ts-node": "^8.4.1"
