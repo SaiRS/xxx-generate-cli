@@ -188,7 +188,7 @@ export class XxxCommand {
 
     if (answer.installConfirm === true) {
       await this.runShellCommand(commandToBeRun);
-      return this.validateEnvironment(name);
+      return this.validateEnvironment(scopeName);
     }
     process.exitCode = -1;
   }
