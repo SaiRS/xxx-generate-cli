@@ -7,21 +7,24 @@
     "test": "jest --collect-coverage",
     "eslint": "eslint",
     "eslint:quick": "eslint './src/**/*.*' './packages/**/*.*'",
-    "build": "tsc && lerna run build",
+    "build:self": "tsc",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc && lerna run build",
     "watch": "tsc --watch & lerna run watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SaiRS/xxx-generate.git"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "generate",
     "project"
   ],
-  "author": "",
+  "files": [
+    "dist",
+    "!*.map"
+  ],
+  "author": "xjiaxiang86@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"
@@ -68,6 +71,8 @@
     "lerna": "^3.16.4",
     "lint-staged": "^9.4.0",
     "prettier": "1.18.2",
+    "rimraf": "^3.0.0",
+    "standard-version": "^7.0.0",
     "ts-node": "^8.4.1"
   },
   "dependencies": {

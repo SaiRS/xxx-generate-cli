@@ -7,8 +7,8 @@ import importLocal from 'import-local';
 // @ts-ignore
 import updateNotifier from 'update-notifier';
 import semver from 'semver';
-
-import packageJson from '../../package.json';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageJson = require('../../package.json');
 import { logger } from '../utils/logger';
 
 if (importLocal(__filename)) {

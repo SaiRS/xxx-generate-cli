@@ -1,9 +1,6 @@
 // import spawn from 'cross-spawn';
 
-// 为了让ts编译后的目录中有package.json文件，因此
-import packageJson from '../package.json';
 import { initReact } from './init-react';
-packageJson;
 
 /**
  * 安装webpack模块

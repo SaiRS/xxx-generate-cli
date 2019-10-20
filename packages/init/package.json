@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
     "watch": "npm run build && tsc -w"
   },
   "bugs": {
@@ -39,6 +40,7 @@
     "is": "^3.3.0"
   },
   "devDependencies": {
-    "@types/is": "^0.0.21"
+    "@types/is": "^0.0.21",
+    "rimraf": "^3.0.0"
   }
 }

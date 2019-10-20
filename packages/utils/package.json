@@ -19,7 +19,7 @@
   },
   "files": [
     "dist",
-    "!dist/*.map"
+    "!*.map"
   ],
   "repository": {
     "type": "git",
@@ -28,8 +28,9 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "tsc",
+    "clean": "rimraf dist",
     "copy": "ts-node copy.ts",
-    "build": "npm run tsc && npm run copy"
+    "build": "npm run clean && npm run tsc && npm run copy"
   },
   "bugs": {
     "url": "https://github.com/SaiRS/xxx-generate/issues"
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.144",
     "@types/prettier": "^1.18.3",
-    "@types/shelljs": "^0.8.5"
+    "@types/shelljs": "^0.8.5",
+    "rimraf": "^3.0.0"
   }
 }

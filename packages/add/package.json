@@ -26,8 +26,9 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "copy": "ts-node copy.ts",
-    "build": "tsc && npm run copy",
+    "copy": "ts-node ./lib/copy.ts",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc && npm run copy",
     "watch": "npm run build && tsc -w"
   },
   "bugs": {
@@ -40,6 +41,7 @@
     "ts-node": "^8.4.1"
   },
   "devDependencies": {
-    "@types/shelljs": "^0.8.5"
+    "@types/shelljs": "^0.8.5",
+    "rimraf": "^3.0.0"
   }
 }
