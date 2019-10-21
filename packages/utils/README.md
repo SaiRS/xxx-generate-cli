@@ -1,11 +1,3 @@
 # `utils`
 
-> TODO: description
-
-## Usage
-
-```
-const utils = require('utils');
-
-// TODO: DEMONSTRATE API
-```
+定义xxx-generate-cli中使用了一些公共方法。

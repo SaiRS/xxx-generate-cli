@@ -15,6 +15,9 @@ shelljs.cp('./lib/editor-config/.editorconfig', './dist/editor-config');
 shelljs.cp('./lib/typescript/tsconfig.json', './dist/typescript');
 shelljs.cp('./lib/typescript/babel.config.js', './dist/typescript');
 
+// browserslist
+shelljs.cp('./lib/browserlist/.browserslistrc', './dist/browserlist');
+
 // eslint
 shelljs.cp('./lib/eslint/template/.eslintrc.js', './dist/eslint');
 shelljs.cp('./lib/eslint/template/.eslintignore', './dist/eslint');

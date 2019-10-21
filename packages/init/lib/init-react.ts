@@ -51,7 +51,7 @@ export function initReact(): void {
   installLintStageTo(cwd);
 
   // 运行环境
-  installBrowserlistTo();
+  installBrowserlistTo(cwd);
 
   // 框架
   console.log('初始化', chalk.green('react'));

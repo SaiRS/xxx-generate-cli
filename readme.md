@@ -54,6 +54,7 @@ npm install @xxx-generate-cli/init -g
       'stylelint-config-recommended',
       'stylelint-config-css-modules',
       'stylelint-prettier/recommended',
+      'stylelint-no-unsupported-browser-features'
       ```
 
    4. webpack配置使用了create-react-app所获得的相关配置。
