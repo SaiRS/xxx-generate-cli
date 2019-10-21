@@ -1,6 +1,6 @@
 {
   "name": "@xxx-generate-cli/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the utils for xxx-generate-cli",
   "keywords": [
     "util",
