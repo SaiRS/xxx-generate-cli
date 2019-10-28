@@ -17,7 +17,8 @@ function getValidEnvironment(environment: string): string {
     return lowerEnvironment;
   }
 
-  return 'react';
+  // 最基本的配置
+  return 'base';
 }
 
 const program = new commander.Command();

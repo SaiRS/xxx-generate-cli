@@ -1,6 +1,7 @@
 // import spawn from 'cross-spawn';
 
 import { initReact } from './init-react';
+import { initBase } from './init-base';
 
 /**
  * 安装webpack模块
@@ -27,8 +28,16 @@ export default function init(...arguements: string[]): void {
   //   'Finially, I came to this point. Cheer for myself.',
   //   arguements[0],
   // );
+  switch (arguements[0]) {
+    case 'react':
+      initReact();
+      break;
 
-  initReact();
+    case 'base':
+    default:
+      initBase();
+      break;
+  }
 }
 
 // function initProject(config: Object): void {
