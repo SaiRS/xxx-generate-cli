@@ -48,4 +48,7 @@ shelljs.cp('-ru', './lib/webpack/configs', './dist/lib/webpack/');
 shelljs.cp('-ru', './lib/webpack/public', './dist/lib/webpack/');
 shelljs.cp('-ru', './lib/webpack/scripts', './dist/lib/webpack/');
 
+// storybook
+shelljs.cp('-ru', './lib/storybook/templates', './dist/lib/storybook');
+
 shelljs.cd('-');

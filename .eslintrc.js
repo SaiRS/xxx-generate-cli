@@ -14,4 +14,8 @@ module.exports = {
       'Promise',
     ],
   },
+  rules: {
+    'no-console': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+  },
 };
