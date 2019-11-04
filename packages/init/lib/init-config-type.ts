@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import is from 'is';
 
 export enum EEnvironment {
   React = 'react',
   Node = 'node',
+  Base = 'base',
 }
 
 /**
@@ -21,6 +24,13 @@ export interface XXXInitConfig {
    * @memberof IFInitConfig
    */
   enviroment: EEnvironment;
+
+  /**
+   * 传入environment的其他参数，由各自的environment去解析
+   * @type {string[]}
+   * @memberof XXXInitConfig
+   */
+  options: Record<string, any>;
 }
 
 /**
@@ -30,7 +40,8 @@ export interface XXXInitConfig {
  */
 export function getDefaultInitConfig(): XXXInitConfig {
   return {
-    enviroment: EEnvironment.React,
+    enviroment: EEnvironment.Base,
+    options: {},
   };
 }
 
@@ -48,9 +59,11 @@ export function getValidEnvironment(uncheckedEnvironment: any): EEnvironment {
         return uncheckedEnvironment as EEnvironment;
 
       default:
-        return EEnvironment.React;
+        return EEnvironment.Base;
     }
   }
 
-  return EEnvironment.React;
+  return EEnvironment.Base;
 }
+
+/* eslint-enable */

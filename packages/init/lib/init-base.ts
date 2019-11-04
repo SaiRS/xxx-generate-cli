@@ -10,8 +10,6 @@ import {
   installLintStageTo,
   installSassTo,
   installJestTo,
-  installReact,
-  installWebpack,
 } from '@xxx-generate-cli/add';
 import chalk from 'chalk';
 
@@ -23,7 +21,7 @@ import chalk from 'chalk';
 export function initBase(): void {
   const cwd = process.cwd();
 
-  console.log(chalk.cyan('初始化react开发环境'));
+  console.log(chalk.cyan('初始化base开发环境'));
   console.log();
 
   console.log('初始化', chalk.green('editorconfig'));
