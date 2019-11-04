@@ -30,7 +30,8 @@ export class XxxCommand {
     // 加载对应的模块
     if (modulePath) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      require(`${modulePath}`).default(...argues);
+      const importModule = require(`${modulePath}`);
+      importModule.default(...argues);
     } else {
       return null;
     }
