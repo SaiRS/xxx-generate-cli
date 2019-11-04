@@ -4,48 +4,48 @@ import shelljs from 'shelljs';
 shelljs.cd(__dirname);
 
 // commit-lint
-shelljs.cp('./lib/commit-lint/.commitlintrc.js', './dist/commit-lint');
-shelljs.cp('./lib/commit-lint/.huskyrc.js', './dist/commit-lint');
-shelljs.cp('./lib/commit-lint/.versionrc.js', './dist/commit-lint');
+shelljs.cp('./lib/commit-lint/.commitlintrc.js', './dist/lib/commit-lint');
+shelljs.cp('./lib/commit-lint/.huskyrc.js', './dist/lib/commit-lint');
+shelljs.cp('./lib/commit-lint/.versionrc.js', './dist/lib/commit-lint');
 
 // editor-config
-shelljs.cp('./lib/editor-config/.editorconfig', './dist/editor-config');
+shelljs.cp('./lib/editor-config/.editorconfig', './dist/lib/editor-config');
 
 // typescript
-shelljs.cp('./lib/typescript/tsconfig.json', './dist/typescript');
-shelljs.cp('./lib/typescript/babel.config.js', './dist/typescript');
+shelljs.cp('./lib/typescript/tsconfig.json', './dist/lib/typescript');
+shelljs.cp('./lib/typescript/babel.config.js', './dist/lib/typescript');
 
 // browserslist
-shelljs.cp('./lib/browserlist/.browserslistrc', './dist/browserlist');
+shelljs.cp('./lib/browserlist/.browserslistrc', './dist/lib/browserlist');
 
 // eslint
-shelljs.cp('./lib/eslint/template/.eslintrc.js', './dist/eslint');
-shelljs.cp('./lib/eslint/template/.eslintignore', './dist/eslint');
+shelljs.cp('./lib/eslint/template/.eslintrc.js', './dist/lib/eslint');
+shelljs.cp('./lib/eslint/template/.eslintignore', './dist/lib/eslint');
 
 // prettier
-shelljs.cp('./lib/prettier/.prettierignore', './dist/prettier');
-shelljs.cp('./lib/prettier/.prettierrc.js', './dist/prettier');
+shelljs.cp('./lib/prettier/.prettierignore', './dist/lib/prettier');
+shelljs.cp('./lib/prettier/.prettierrc.js', './dist/lib/prettier');
 
 // lint-staged
-shelljs.cp('./lib/lint-staged/lint-staged.config.js', './dist/lint-staged');
+shelljs.cp('./lib/lint-staged/lint-staged.config.js', './dist/lib/lint-staged');
 
 // stylelint
 shelljs.cp(
   './lib/stylelint/template/.stylelintignore',
-  './dist/stylelint/template',
+  './dist/lib/stylelint/template',
 );
 shelljs.cp(
   './lib/stylelint/template/.stylelintrc.js',
-  './dist/stylelint/template',
+  './dist/lib/stylelint/template',
 );
 
 // jest
-shelljs.cp('./lib/jest/jest.config.js', './dist/jest/');
+shelljs.cp('./lib/jest/jest.config.js', './dist/lib/jest/');
 
 // webpack
-shelljs.cp('./lib/webpack/webpack.config.js', './dist/webpack');
-shelljs.cp('-ru', './lib/webpack/configs', './dist/webpack/');
-shelljs.cp('-ru', './lib/webpack/public', './dist/webpack/');
-shelljs.cp('-ru', './lib/webpack/scripts', './dist/webpack/');
+shelljs.cp('./lib/webpack/webpack.config.js', './dist/lib/webpack');
+shelljs.cp('-ru', './lib/webpack/configs', './dist/lib/webpack/');
+shelljs.cp('-ru', './lib/webpack/public', './dist/lib/webpack/');
+shelljs.cp('-ru', './lib/webpack/scripts', './dist/lib/webpack/');
 
 shelljs.cd('-');
