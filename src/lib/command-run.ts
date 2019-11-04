@@ -21,7 +21,7 @@ export class XxxCommand {
    * @param {string} command cli输入的命令, 如init, add等
    * @returns {Promise<any>} promise of any
    */
-  public static async run(command: string, ...argues: string[]): Promise<any> {
+  public static async run(command: string, ...argues: any[]): Promise<any> {
     let modulePath = this.validateEnvironment(command);
     const scopeName = this.getPackageNameFromCommand(command);
     if (!modulePath) {
@@ -30,7 +30,7 @@ export class XxxCommand {
     // 加载对应的模块
     if (modulePath) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      require(`${modulePath}`).default(argues);
+      require(`${modulePath}`).default(...argues);
     } else {
       return null;
     }

@@ -1,4 +1,3 @@
-// import { logger } from '../utils/logger';
 import commander, { Command } from 'commander';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../../package.json');
@@ -28,11 +27,24 @@ program
   .command('init [env]')
   .description('init the project, env can be react | node, default is react')
   // eslint-disable-next-line unicorn/prevent-abbreviations, @typescript-eslint/no-unused-vars
-  .action(function(env = 'react', cmdObj: Command) {
+  .action(function(env = 'base', cmdObj: Command) {
     //
     // logger.log(`env = ${getValidEnvironment(env)}`);
     // 执行命令
-    XxxCommand.run('init', getValidEnvironment(env));
+    XxxCommand.run('init', getValidEnvironment(env), cmdObj.opts());
+  });
+
+program
+  .command('add <lib>')
+  .option('--react', 'react')
+  .description('add lib to the project')
+  // eslint-disable-next-line unicorn/prevent-abbreviations, @typescript-eslint/no-unused-vars
+  .action(function(lib, cmdObj: Command) {
+    // //
+    // logger.log(`lib = ${lib}`, cmdObj.opts());
+    // 执行命令
+
+    XxxCommand.run('add', lib, cmdObj.opts());
   });
 
 program
