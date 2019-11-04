@@ -30,10 +30,32 @@ npm install @xxx-generate-cli/init -g
    npm init -y
    ```
 
-2. 生成项目
+
+
+| 命令 | 参数       | 选项    | 说明                                                         | 例子                          |
+| ---- | ---------- | ------- | ------------------------------------------------------------ | ----------------------------- |
+| init | react/base | 无      | 初始化项目，指定react表示按照react的开发环境来生成，ba se表示一个基础的版本（不包含任何框架） | `xxx-generate-cli init react` |
+| add  | storybook  | --react |                                                              |                               |
+
+## 例子
+
+1. 初始化base项目
+
+   ```
+   ./node_modules/.bin/xxx-generate-cli init base
+   ```
+
+2. 初始化react项目
 
    ```
    ./node_modules/.bin/xxx-generate-cli init react
+   ```
+
+3. 初始化react项目之后，再添加storybook
+
+   ```
+   ./node_modules/.bin/xxx-generate-cli init react
+   ./node_modules/.bin/xxx-generate-cli add storybook --react
    ```
 
 ## 说明
@@ -62,3 +84,4 @@ npm install @xxx-generate-cli/init -g
 2. 因为使用了新版的husky，所以需要git版本\>=2.13.2.
 
 > 目前暂只支持快速生成react项目
+
