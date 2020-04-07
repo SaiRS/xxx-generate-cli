@@ -1,3 +1,6 @@
 language: node_js
-script: ./scripts/run-tests.sh
-test: skip
+node_js:
+  - "10"
+
+install: true
+script: true
